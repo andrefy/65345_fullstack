@@ -1,0 +1,8 @@
+fastapi[standard]
+sqlmodel
+python-dotenv
+pyjwt
+pwdlib[argon2]
+black
+flake8
+isort

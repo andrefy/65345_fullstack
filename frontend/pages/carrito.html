@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi carrito - Mi Tienda</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+<div id="encabezado"></div>
+
+<main class="contenedor">
+
+  <h1 class="seccion-titulo">Mi carrito</h1>
+
+  <!-- Lista de items (la llena carrito.js) -->
+  <div id="items-carrito">
+    <p class="cargando">Cargando carrito…</p>
+  </div>
+
+  <!-- Resumen del total -->
+  <div id="resumen-carrito" class="tarjeta carrito-resumen" hidden>
+    <div class="carrito-total">
+      <span>Total:</span>
+      <strong id="total-carrito">$0.00</strong>
+    </div>
+    <button class="btn btn-primario" id="btn-confirmar">Confirmar pedido</button>
+  </div>
+
+  <div id="mensaje-carrito" role="status" aria-live="polite"></div>
+
+</main>
+
+<script src="../js/configuracion.js" defer></script>
+<script src="../js/api.js" defer></script>
+<script src="../js/comun.js" defer></script>
+<script src="../js/carrito.js" defer></script>
+</body>
+</html>

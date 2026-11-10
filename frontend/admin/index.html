@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de administración - Mi Tienda</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+<div id="encabezado"></div>
+
+<div class="layout-admin contenedor">
+
+  <!-- Barra lateral de navegación del admin -->
+  <nav class="admin-sidebar" aria-label="Menú de administración">
+    <h2>Administración</h2>
+    <ul>
+      <li><a href="index.html" class="activo">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="categorias.html">Categorías</a></li>
+      <li><a href="pedidos.html">Pedidos</a></li>
+      <li><a href="../index.html">← Ir a la tienda</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="admin-contenido">
+    <h1>Panel de administración</h1>
+
+    <div class="admin-tarjetas" id="tarjetas-resumen">
+      <p class="cargando">Cargando estadísticas…</p>
+    </div>
+  </main>
+
+</div>
+
+<script src="../js/configuracion.js" defer></script>
+<script src="../js/api.js" defer></script>
+<script src="../js/comun.js" defer></script>
+<script src="../js/admin-index.js" defer></script>
+</body>
+</html>

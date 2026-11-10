@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi cuenta - Mi Tienda</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+<div id="encabezado"></div>
+
+<main class="contenedor">
+
+  <h1 class="seccion-titulo">Mi cuenta</h1>
+
+  <div class="tarjeta">
+    <h2>Información de la cuenta</h2>
+    <div id="info-usuario">
+      <p class="cargando">Cargando…</p>
+    </div>
+  </div>
+
+  <div class="tarjeta" style="margin-top:1.5rem">
+    <h2>Acciones rápidas</h2>
+    <nav class="lista-acciones" aria-label="Acciones de cuenta">
+      <a href="mis-pedidos.html" class="btn btn-secundario">Ver mis pedidos</a>
+      <a href="carrito.html" class="btn btn-secundario">Ver mi carrito</a>
+      <button id="btn-cerrar-sesion" class="btn btn-peligro">Cerrar sesión</button>
+    </nav>
+  </div>
+
+</main>
+
+<script src="../js/configuracion.js" defer></script>
+<script src="../js/api.js" defer></script>
+<script src="../js/comun.js" defer></script>
+<script src="../js/cuenta.js" defer></script>
+</body>
+</html>

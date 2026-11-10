@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrar productos - Mi Tienda</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+<div id="encabezado"></div>
+
+<div class="layout-admin contenedor">
+
+  <nav class="admin-sidebar" aria-label="Menú de administración">
+    <h2>Administración</h2>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html" class="activo">Productos</a></li>
+      <li><a href="categorias.html">Categorías</a></li>
+      <li><a href="pedidos.html">Pedidos</a></li>
+      <li><a href="../index.html">← Ir a la tienda</a></li>
+    </ul>
+  </nav>
+
+  <main class="admin-contenido">
+    <div class="admin-header">
+      <h1>Productos</h1>
+      <a href="producto-formulario.html" class="btn btn-primario btn-sm">+ Nuevo producto</a>
+    </div>
+
+    <div id="mensaje-admin" role="status" aria-live="polite"></div>
+
+    <div id="tabla-productos">
+      <p class="cargando">Cargando productos…</p>
+    </div>
+  </main>
+
+</div>
+
+<script src="../js/configuracion.js" defer></script>
+<script src="../js/api.js" defer></script>
+<script src="../js/comun.js" defer></script>
+<script src="../js/admin-productos.js" defer></script>
+</body>
+</html>

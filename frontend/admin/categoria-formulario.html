@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de categoría - Mi Tienda</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+<div id="encabezado"></div>
+
+<div class="layout-admin contenedor">
+
+  <nav class="admin-sidebar" aria-label="Menú de administración">
+    <h2>Administración</h2>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="categorias.html" class="activo">Categorías</a></li>
+      <li><a href="pedidos.html">Pedidos</a></li>
+      <li><a href="../index.html">← Ir a la tienda</a></li>
+    </ul>
+  </nav>
+
+  <main class="admin-contenido">
+    <h1 id="titulo-formulario">Nueva categoría</h1>
+
+    <form class="formulario" id="form-categoria" novalidate>
+
+      <div class="campo">
+        <label for="input-nombre">Nombre de la categoría</label>
+        <input type="text" id="input-nombre" name="nombre" placeholder="Ej: Teclados" required>
+      </div>
+
+      <div class="campo">
+        <label for="input-descripcion">Descripción</label>
+        <textarea id="input-descripcion" name="descripcion" rows="3" placeholder="Descripción de la categoría"></textarea>
+      </div>
+
+      <div id="mensaje-form" role="alert"></div>
+
+      <div class="botones-form">
+        <button type="submit" class="btn btn-primario" id="btn-guardar">Guardar</button>
+        <a href="categorias.html" class="btn btn-secundario">Cancelar</a>
+      </div>
+
+    </form>
+  </main>
+
+</div>
+
+<script src="../js/configuracion.js" defer></script>
+<script src="../js/api.js" defer></script>
+<script src="../js/comun.js" defer></script>
+<script src="../js/admin-categoria-formulario.js" defer></script>
+</body>
+</html>

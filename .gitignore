@@ -1,0 +1,28 @@
+# Archivos de macOS
+.DS_Store
+._*
+
+# Entornos virtuales de Python
+.venv/
+venv/
+env/
+ENV/
+
+# Caché y archivos compilados de Python
+__pycache__/
+
+# Variables de entorno y configuración local
+.env
+
+# Caché de pruebas y herramientas de Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+

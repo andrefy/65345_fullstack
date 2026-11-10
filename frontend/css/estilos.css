@@ -1,0 +1,413 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #243447;
+  line-height: 1.5;
+}
+
+a {
+  color: #1a56db;
+}
+
+img {
+  max-width: 100%;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1, h2, p {
+  margin-top: 0;
+}
+
+/* Los campos ocultos del registro no se muestran en el login. */
+[hidden] {
+  display: none !important;
+}
+
+/* Un solo menú, que ocupa varias filas si falta espacio. */
+.encabezado, .navegacion {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.encabezado {
+  background: white;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 20px;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navegacion a {
+  text-decoration: none;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font: inherit;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-primario {
+  background: #1a56db;
+  color: white;
+}
+
+.btn-secundario {
+  background: white;
+  color: #243447;
+}
+
+.btn-peligro {
+  background: #fee2e2;
+  color: #a11919;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.btn-enlace {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #1a56db;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Formularios */
+.formulario, .campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formulario {
+  gap: 15px;
+  max-width: 600px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font: inherit;
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Separar la flecha del borde derecho del selector de categorías. */
+#select-categoria {
+  appearance: none;
+  background: white url("../assets/flecha.svg") no-repeat right 12px center;
+  background-size: 12px;
+  padding-right: 36px;
+}
+
+.campo input, .campo select, .campo textarea {
+  width: 100%;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+/* Tarjetas que comparten el mismo fondo y borde. */
+.tarjeta, .tarjeta-auth, .tarjeta-producto, .detalle-producto,
+.carrito-resumen, .admin-sidebar, .admin-tarjeta, .filtros {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.tarjeta-auth {
+  max-width: 420px;
+  margin: 30px auto;
+}
+
+.auth-pie {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Inicio y catálogo */
+.hero {
+  background: #1a56db;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.buscador-form, .filtros-fila, .categorias-chips,
+.botones-form, .confirmacion-acciones, .celdas-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.buscador-form input, .filtros-fila input, .filtros-fila select {
+  flex: 1;
+}
+
+.buscador-form, .filtros, .seccion, .breadcrumb {
+  margin-bottom: 20px;
+}
+
+.chip-categoria {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.grilla-productos, .admin-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tarjeta-producto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.img-contenedor {
+  text-align: center;
+}
+
+.img-contenedor img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.tarjeta-info {
+  flex: 1;
+}
+
+.tarjeta-nombre, .tarjeta-precio, .pedido-numero {
+  font-weight: bold;
+}
+
+.tarjeta-desc, .contador-resultados, .pedido-fecha, .breadcrumb {
+  color: #666;
+}
+
+/* Detalle del producto */
+.detalle-producto {
+  display: flex;
+  gap: 25px;
+}
+
+.detalle-imagen {
+  width: 40%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.detalle-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.detalle-precio, .confirmacion-total, .pedido-total-grande {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a56db;
+}
+
+.detalle-controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.detalle-controles input, .input-cantidad-carrito {
+  width: 70px;
+}
+
+.stock-disponible {
+  color: #15803d;
+}
+
+.stock-agotado {
+  color: #a11919;
+}
+
+/* Tablas de carrito, pedidos y administración */
+.tabla-carrito, .tabla-pedido, .tabla-admin {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background: #eee;
+}
+
+.carrito-thumbnail {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.carrito-resumen, .pedido-fila, .botones-form {
+  margin-top: 20px;
+}
+
+.carrito-total, .pedido-encabezado, .admin-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Administración y cuenta */
+.layout-admin {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 20px;
+}
+
+.admin-contenido {
+  min-width: 0;
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-sidebar a {
+  display: block;
+  padding: 8px 0;
+}
+
+.admin-sidebar h2 {
+  font-size: 18px;
+}
+
+.activo, .admin-tarjeta-valor {
+  font-weight: bold;
+}
+
+.admin-tarjeta, #resultado-confirmacion {
+  text-align: center;
+}
+
+.admin-tarjeta span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.admin-tarjeta-valor, .confirmacion-icono {
+  font-size: 30px;
+  color: #1a56db;
+}
+
+.lista-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+}
+
+/* Mensajes y estados de los pedidos */
+.mensaje, .badge {
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.mensaje-error {
+  background: #fee2e2;
+  color: #a11919;
+}
+
+.mensaje-exito, .badge-entregado, .badge-enviado {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.mensaje-info, .badge-procesando {
+  background: #dbeafe;
+  color: #1743a1;
+}
+
+.mensaje-advertencia, .badge-pendiente {
+  background: #fef3c7;
+  color: #854d0e;
+}
+
+.cargando {
+  padding: 20px;
+  color: #666;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* En pantallas pequeñas se muestra una sola columna. */
+@media (max-width: 700px) {
+  .grilla-productos, .admin-tarjetas, .layout-admin {
+    grid-template-columns: 1fr;
+  }
+
+  .detalle-producto {
+    flex-direction: column;
+  }
+
+  .detalle-imagen {
+    width: 100%;
+  }
+}

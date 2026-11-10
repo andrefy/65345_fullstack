@@ -1,0 +1,4 @@
+DATABASE_URL = # url a la DB
+SECRET_KEY =   # Secreto hash
+ALGORITHM =    # Se sugiere HS256
+ACCESS_TOKEN_EXPIRE_MINUTES = # Valor entero en minutos

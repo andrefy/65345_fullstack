@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - Mi Tienda</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+<div id="encabezado"></div>
+
+<main class="contenedor">
+
+  <h1 class="seccion-titulo">Catálogo de productos</h1>
+
+  <!-- Filtros de búsqueda y categoría -->
+  <section aria-label="Filtros">
+    <form class="filtros" id="form-filtros">
+      <div class="filtros-fila">
+        <label for="input-buscar" class="visually-hidden">Buscar</label>
+        <input
+          type="search"
+          id="input-buscar"
+          placeholder="Buscar en el catálogo…"
+          aria-label="Buscar productos"
+        >
+        <label for="select-categoria" class="visually-hidden">Categoría</label>
+        <select id="select-categoria" aria-label="Filtrar por categoría">
+          <option value="">Todas las categorías</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primario btn-sm" style="width:auto">Aplicar</button>
+    </form>
+  </section>
+
+  <!-- Contador y resultados -->
+  <p id="contador-resultados" class="contador-resultados"></p>
+  <div id="grilla-productos" class="grilla-productos">
+    <p class="cargando">Cargando productos…</p>
+  </div>
+
+</main>
+
+<script src="../js/configuracion.js" defer></script>
+<script src="../js/api.js" defer></script>
+<script src="../js/comun.js" defer></script>
+<script src="../js/catalogo.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Mi Tienda</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<div id="encabezado"></div>
+
+<main class="contenedor">
+
+  <!-- Presentación de la tienda -->
+  <section class="hero" aria-label="Bienvenida">
+    <h2>¡Bienvenido a Mi Tienda!</h2>
+  </section>
+
+  <!-- Buscador: redirige al catálogo con el término -->
+  <section aria-label="Buscar productos">
+    <form class="buscador-form" id="form-buscar">
+      <label for="input-buscar" class="visually-hidden">Buscar productos</label>
+      <input
+        type="search"
+        id="input-buscar"
+        name="buscar"
+        placeholder="Buscar productos (ej. mouse, teclado)..."
+        aria-label="Término de búsqueda"
+      >
+      <button type="submit" class="btn btn-primario btn-sm">Buscar</button>
+    </form>
+  </section>
+
+  <!-- Productos aleatorios -->
+  <section class="seccion" aria-label="Productos para ti">
+    <h2 class="seccion-titulo">Productos para ti</h2>
+    <div id="productos-destacados" class="grilla-productos">
+      <p class="cargando">Cargando productos…</p>
+    </div>
+  </section>
+
+  <!-- Categorías -->
+  <section class="seccion" aria-label="Categorías">
+    <h2 class="seccion-titulo">Categorías</h2>
+    <div id="lista-categorias" class="categorias-chips">
+      <p class="cargando">Cargando…</p>
+    </div>
+  </section>
+
+</main>
+
+<script src="js/configuracion.js" defer></script>
+<script src="js/api.js" defer></script>
+<script src="js/comun.js" defer></script>
+<script src="js/inicio.js" defer></script>
+</body>
+</html>

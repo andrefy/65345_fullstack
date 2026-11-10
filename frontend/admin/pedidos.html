@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrar pedidos - Mi Tienda</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+<div id="encabezado"></div>
+
+<div class="layout-admin contenedor">
+
+  <nav class="admin-sidebar" aria-label="Menú de administración">
+    <h2>Administración</h2>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="categorias.html">Categorías</a></li>
+      <li><a href="pedidos.html" class="activo">Pedidos</a></li>
+      <li><a href="../index.html">← Ir a la tienda</a></li>
+    </ul>
+  </nav>
+
+  <main class="admin-contenido">
+    <h1>Todos los pedidos</h1>
+
+    <div id="mensaje-admin" role="status" aria-live="polite"></div>
+
+    <div id="tabla-pedidos">
+      <p class="cargando">Cargando pedidos…</p>
+    </div>
+  </main>
+
+</div>
+
+<script src="../js/configuracion.js" defer></script>
+<script src="../js/api.js" defer></script>
+<script src="../js/comun.js" defer></script>
+<script src="../js/admin-pedidos.js" defer></script>
+</body>
+</html>

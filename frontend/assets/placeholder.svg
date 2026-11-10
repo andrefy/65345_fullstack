@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220" width="300" height="220">
+  <rect width="300" height="220" fill="#e8edf2"/>
+  <rect x="90" y="60" width="120" height="80" rx="8" fill="#c5d0dc"/>
+  <circle cx="130" cy="88" r="14" fill="#a0b0c0"/>
+  <polygon points="90,140 150,90 200,120 240,95 240,140" fill="#b0c4d4"/>
+  <text x="150" y="175" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#7a9ab0">Sin imagen</text>
+</svg>
